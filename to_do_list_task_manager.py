@@ -60,10 +60,6 @@ async def user_choice(user:Choice):
         return {"Display":1}
     elif user.choice == "2":
         return {"Display":2}
-    elif user.choice == "3":
-        return {"Display":3}
-    else:
-        return {"Display":4}
 
 @app.post("/add-task",status_code=status.HTTP_201_CREATED)
 async def add_task(user:Task,db:db_dependency):
